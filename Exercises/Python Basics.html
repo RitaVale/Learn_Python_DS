@@ -1,0 +1,508 @@
+<html lang="en" class="rem-14">
+
+<head>
+  <style type="text/css">
+    body {
+      line-height: 1.428571429 !important;
+      font-family: var(--ps-type-font-family);
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+
+    :root {
+      --ps-type-font-family: "OpenSans", Arial, Helvetica, sans-serif;
+      --ps-type-font-family-code: "DM Mono", "Source Code Pro", monospace;
+      --ps-type-letter-spacing-tighter: -0.025em;
+      --ps-colors-background-dark-3: #1e2429;
+      --ps-colors-code-white: #f2f2f2;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .footer {
+      font-size: 13px;
+    }
+
+    code {
+      display: inline-block;
+      margin: 0 20px;
+      padding: 15px 0;
+      line-height: 1.5em;
+      letter-spacing: var(--ps-type-letter-spacing-tighter);
+      font-family: var(--ps-type-font-family-code);
+      font-size: 15px;
+    }
+
+    code:not(.cmh) {
+      border-radius: 0;
+      color: #4e9bcc;
+      display: inline-block;
+      margin: 0;
+      background: #f7f7f8;
+      padding: 0 6px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .mtk1 {
+      color: #f2f2f2;
+    }
+
+    .mtk4 {
+      color: #ff9466;
+    }
+
+    .mtk6 {
+      color: #b8cc7a;
+    }
+
+    .mtk7 {
+      color: #aaaaaa;
+    }
+
+    .mtk9 {
+      color: #e695bd;
+    }
+
+    pre {
+      letter-spacing: var(--ps-type-letter-spacing-tighter);
+      font-family: var(--ps-type-font-family-code);
+      font-size: 15px;
+    }
+
+    .output {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <span style="display:none">Rita Vale - rita.martins.vale@gmail.com</span>
+  <h1>Basics</h1>
+  <b class="title">Exercise 1: Print "Hello, World!"</b>&ensp;
+  <a class="footer" target="_blank" href="https://www.hackerrank.com/challenges/py-hello-world/problem">Source</a>
+  <div class="content">
+    <p>Write a simple program that displays <code>Hello, World!</code>.</p>
+    <p class="output">Sample Output</p>
+    <code>Hello, World!</code>
+    <br>
+    <br />
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%"><span style="color: #00aaaa">print</span>(<span style="color: #aa5500">&#39;Hello, world!&#39;</span>)
+</pre>
+      </div>
+    </details>
+  </div>
+  <br>
+  <br>
+  <b class="title">Exercise 2: What's Your Name?</b>&ensp;
+  <a class="footer" target="_blank" href="https://www.hackerrank.com/challenges/whats-your-name/problem">Source</a>
+  <div class="content">
+    <p>Ask the user for their <code>firstname</code> and <code>lastname</code> of a person on two different lines, and
+      print the following:
+      <br>&emsp;<code>Hello firstname lastname! You just delved into python.</code>
+    </p>
+    <p class="output">Sample Input</p>
+    <code>Ross &ensp;</code>
+    <br>
+    <code>Taylor</code>
+    <p class="output">Sample Output</p>
+    <code>Hello Ross Taylor! You just delved into python.</code>
+    <br>
+    <br>
+    <details>
+      <summary><b>Hint</b></summary>
+      Use <a target="_blank" href="https://www.tutorialsteacher.com/python/input-function"> input()</a> to get the
+      user's name.
+    </details>
+    <br />
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%">firstname = <span style="color: #00aaaa">input</span>()
+lastname = <span style="color: #00aaaa">input</span>()
+
+<span style="color: #00aaaa">print</span>(<span style="color: #aa5500">&quot;Hello &quot;</span> + firstname + <span style="color: #aa5500">&quot; &quot;</span> + lastname + <span style="color: #aa5500">&quot;! You just delved into python.&quot;</span>)
+</pre>
+      </div>
+    </details>
+  </div>
+  <br>
+  <br>
+  <b class="title">Exercise 3: Convert Celsius To Fahrenheit</b>&ensp;
+  <a class="footer" target="_blank"
+    href="https://www.geeksforgeeks.org/python-program-to-convert-celsius-to-fahrenheit/">Source</a>
+  <div class="content">
+    <p>Given the temperature in degree Celsius. the task is to convert the value in the Fahrenheit scale and display it.
+    </p>
+    <p class="output">Sample Input</p>
+    <code>celsius = 25</code>
+    <br>
+    <p class="output">Sample Output</p>
+    <code>Temperature in Fahrenheit is: 77.0</code>
+    <br>
+    <br>
+    <details>
+      <summary><b>Hint</b></summary>
+      To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 and add 32.
+    </details>
+    <br />
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic"># Temperature in celsius degree</span>
+celsius = <span style="color: #00aaaa">float</span>(<span style="color: #00aaaa">input</span>())
+ 
+<span style="color: #aaaaaa; font-style: italic"># Convert the temperature using the formula</span>
+fahrenheit = (celsius * <span style="color: #009999">1.8</span>) + <span style="color: #009999">32</span>
+         
+<span style="color: #aaaaaa; font-style: italic"># printing the result</span>
+<span style="color: #00aaaa">print</span>(<span style="color: #aa5500">&quot;Temperature in Farenheit is:&quot;</span>, fahrenheit)
+</pre>
+      </div>
+    </details>
+  </div>
+  <br>
+  <br>
+  <b class="title">Exercise 4: Arithmetic Operators</b>&ensp;
+  <a class="footer" target="_blank"
+    href="https://www.hackerrank.com/challenges/python-arithmetic-operators/problem">Source</a>
+  <div class="content">
+    <p>Write a program that asks the user for two integers <code>a</code> and <code>b</code> and print three lines
+      where:
+    <ol>
+      <li>The first line contains the sum of the two numbers.</li>
+      <li>The second line contains the difference of the two numbers (first - second).</li>
+      <li>The third line contains the product of the two numbers.</li>
+    </ol>
+
+    </p>
+    <p class="output">Sample Input</p>
+    <code>&ensp;3&ensp;</code>
+    <br>
+    <code>&ensp;2&ensp;</code>
+    <br>
+    <p class="output">Sample Output</p>
+    <code>&ensp;5&ensp;</code>
+    <br>
+    <code>&ensp;1&ensp;</code>
+    <br>
+    <code>&ensp;6&ensp;</code>
+    <br>
+    <br>
+    <details>
+      <summary><b>Hint</b></summary>
+      The user's input is a string that needs to be converted into an integer (see <a target="_blank"
+        href="https://www.tutorialsteacher.com/python/int-method">int()</a>).
+    </details>
+    <br>
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%">a = <span style="color: #00aaaa">int</span>(<span style="color: #00aaaa">input</span>())
+b = <span style="color: #00aaaa">int</span>(<span style="color: #00aaaa">input</span>())
+
+<span style="color: #00aaaa">print</span>(a + b)
+<span style="color: #00aaaa">print</span>(a - b)
+<span style="color: #00aaaa">print</span>(a * b)
+</pre>
+      </div>
+    </details>
+  </div>
+  <br>
+  <hr>
+  <h1>If..Else</h1>
+  <b class="title">Exercise 1: Max Of Three</b>&ensp;
+  <a class="footer" target="_blank"
+    href="https://www.practicepython.org/exercise/2016/03/27/28-max-of-three.html">Source</a>
+  <div class="content">
+    <p>Given three integers as input, print the largest of the three. Do this without using the Python max()
+      function!<br>
+      The goal of this exercise is to think about some internals that Python normally takes care of for us. All you need
+      is some variables and if statements!</p>
+    <p class="output">Sample Input</p>
+    <code>&ensp;a = 2&ensp;</code>
+    <br>
+    <code>&ensp;b = 7&ensp;</code>
+    <br>
+    <code>&ensp;c = 4&ensp;</code>
+    <p class="output">Sample Output</p>
+    <code>&ensp;7&ensp;</code>
+    <br>
+    <br />
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%">a = <span style="color: #00aaaa">int</span>(<span style="color: #00aaaa">input</span>())
+b = <span style="color: #00aaaa">int</span>(<span style="color: #00aaaa">input</span>())
+c = <span style="color: #00aaaa">int</span>(<span style="color: #00aaaa">input</span>())
+    
+<span style="color: #0000aa">if</span> (a &gt; b) <span style="color: #0000aa">and</span> (a &gt; c):
+    <span style="color: #00aaaa">print</span>(a)
+<span style="color: #0000aa">elif</span> (b &gt; a) <span style="color: #0000aa">and</span> (b &gt; c):
+    <span style="color: #00aaaa">print</span>(b)
+<span style="color: #0000aa">else</span>:
+    <span style="color: #00aaaa">print</span>(c)
+</pre>
+      </div>
+    </details>
+  </div>
+  <br>
+  <br>
+  <b class="title">Exercise 2: Weird number</b>&ensp;
+  <a class="footer" target="_blank" href="https://www.hackerrank.com/challenges/py-if-else/problem">Source</a>
+  <div class="content">
+    <p>After asking the user for an integer <code>n</code>, perform the following conditional actions:</p>
+    <ol>
+      <li>If <code>n</code> is odd, print <code>Weird</code></li>
+      <li>If <code>n</code> is even and in the inclusive range of <i>2</i> to <i>5</i>, print <code>Not Weird</code>
+      </li>
+      <li>If <code>n</code> is even and in the inclusive range of <i>6</i> to <i>20</i>, print <code>Weird</code></li>
+      <li>If <code>n</code> is even and greater than <i>20</i>, print <code>Not Weird</code></li>
+    </ol>
+    <p class="output">Sample Input 0</p>
+    <code>&ensp;3&ensp;</code>
+    <p class="output">Sample Output 0</p>
+    <code>&ensp;Weird&ensp;</code>
+    <p class="output">Sample Input 1</p>
+    <code>&ensp;24&ensp;</code>
+    <p class="output">Sample Output 1</p>
+    <code>&ensp;Not Weird&ensp;</code>
+    <br>
+    <br />
+    <details>
+      <summary><b>Hint</b></summary>
+      If a number divided by 2 has a remainder of 0 it's even otherwise, if the remainder is 1, then it's odd.
+      <br>
+      The operation <code>a % b</code> gives the remainder of dividing <code>a</code> by <code>b</code> (<code>%</code>
+      is called the modulo operator).
+    </details>
+    <br />
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%">n = <span style="color: #00aaaa">int</span>(<span style="color: #00aaaa">input</span>())
+ 
+<span style="color: #0000aa">if</span> n%<span style="color: #009999">2</span>==<span style="color: #009999">1</span>:
+    <span style="color: #00aaaa">print</span> (<span style="color: #aa5500">&quot;Weird&quot;</span>)  
+<span style="color: #0000aa">elif</span> <span style="color: #009999">2</span> &lt;= n &lt;= <span style="color: #009999">5</span>:
+    <span style="color: #00aaaa">print</span>(<span style="color: #aa5500">&quot;Not Weird&quot;</span>)
+<span style="color: #0000aa">elif</span> <span style="color: #009999">6</span> &lt;= n &lt;= <span style="color: #009999">20</span>:
+    <span style="color: #00aaaa">print</span>(<span style="color: #aa5500">&quot;Weird&quot;</span>)
+<span style="color: #0000aa">else</span>:
+    <span style="color: #00aaaa">print</span>(<span style="color: #aa5500">&quot;Not Weird&quot;</span>)
+</pre>
+      </div>
+    </details>
+  </div>
+  <br>
+  <hr>
+  <h1>Strings</h1>
+  <b class="title">Exercise 1: Mutations</b>&ensp;
+  <a class="footer" target="_blank" href="https://www.hackerrank.com/challenges/python-mutations/problem">Source</a>
+  <div class="content">
+    <p>Given the string <code>abracadabra</code> replace the character at index <code>5</code> for the letter
+      <code>k</code>, and print the modified string.</p>
+    <p class="output">Expected Output</p>
+    <code>abrackdabra</code>
+    <br>
+    <br />
+    <details>
+      <summary><b>Hint</b></summary>
+      Remember index starts at 0
+      <br>
+      If <code>string = "abracadabra"</code>,
+      <code>string[:5]</code> gives <code>abrac</code> and <code>string[6:]</code> gives <code>dabra</code>.
+    </details>
+    <br>
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%">string = <span style="color: #aa5500">&quot;abracadabra&quot;</span>
+string[:<span style="color: #009999">5</span>] + <span style="color: #aa5500">&#39;k&#39;</span> + string[<span style="color: #009999">6</span>:]
+</pre>
+      </div>
+    </details>
+  </div>
+  <br>
+  <br>
+  <b class="title">Exercise 2: Word Count</b>&ensp;
+  <div class="content">
+    <p>Write a program that asks the user for a sentence and displays the number of words in that sentence.</p>
+    <p class="output">Sample Input</p>
+    <code>&ensp;Hello World&ensp;</code>
+    <br>
+    <p class="output">Sample Output</p>
+    <code>&ensp;2&ensp;</code>
+    <br>
+    <br />
+    <details>
+      <summary><b>Hint</b></summary>
+      Use <a target="_blank" href="https://www.tutorialsteacher.com/python/string-split">split()</a> and <a
+        target="_blank" href="https://www.tutorialsteacher.com/python/len-method">len()</a>.
+    </details>
+    <br>
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%"><span style="color: #00aaaa">print</span>(<span style="color: #00aaaa">len</span>(<span style="color: #00aaaa">input</span>().split()))
+</pre>
+      </div>
+    </details>
+    <br>
+    <br>
+    <b class="title">Other Exercises</b>&ensp;
+    <p>Complete the following exercises:</p>
+    <ul>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-string-exercise/#h-exercise-1a-create-a-string-made-of-the-first-middle-and-last-character">Create
+          a string made of the first, middle and last character
+        </a>
+      </li>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-string-exercise/#h-exercise-8-find-all-occurrences-of-a-substring-in-a-given-string-by-ignoring-the-case">Find
+          all occurrences of a substring in a given string by ignoring the case
+        </a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <hr>
+  <h1>Lists</h1>
+  <b class="title">Exercise 1: List Ends</b>&ensp;
+  <a class="footer" target="_blank"
+    href="https://www.practicepython.org/exercise/2014/04/25/12-list-ends.html">Source</a>
+  <div class="content">
+    <p>Given the list of numbers <code>a = [5, 10, 15, 20, 25]</code>, make a new list of only the first and last
+      elements.</p>
+    <p class="output">Expected Output</p>
+    <code>[5, 25]</code>
+    <br>
+    <br />
+    <details>
+      <summary><b>Solution</b></summary>
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%">[a[<span style="color: #009999">0</span>], a[-<span style="color: #009999">1</span>]]
+</pre>
+      </div>
+      or
+      <!-- HTML generated using hilite.me -->
+      <div
+        style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+        <pre style="margin: 0; line-height: 125%">[a[<span style="color: #009999">0</span>], a[<span style="color: #00aaaa">len</span>(a)-<span style="color: #009999">1</span>]]
+</pre>
+      </div>
+    </details>
+    <br>
+    <br>
+    <b class="title">Other Exercises</b>&ensp;
+    <p>Complete the following exercises:</p>
+    <ul>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-list-exercise-with-solutions/#h-exercise-7-add-new-item-to-list-after-a-specified-item">Add
+          new item to list after a specified item
+        </a>
+      </li>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-list-exercise-with-solutions/#h-exercise-8-extend-nested-list-by-adding-the-sublist">Extend
+          nested list by adding the sublist
+        </a>
+      </li>
+      <li>Exercises 1, 2, 5 and 10 from
+        <a target="_blank" href="https://pynative.com/python-data-structure-exercise-for-beginners/">here</a>.
+      </li>
+    </ul>
+  </div>
+  <br>
+  <hr>
+  <h1>Dictionaries</h1>
+  <div class="content">
+    <p>Complete the following exercises:</p>
+    <ul>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-7-check-if-a-value-exists-in-a-dictionary">Check
+          if a value exists in a dictionary
+        </a>
+      </li>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-10-change-value-of-a-key-in-a-nested-dictionary">Change
+          value of a key in a nested dictionary
+        </a>
+      </li>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-dictionary-exercise-with-solutions/#h-exercise-8-rename-key-of-a-dictionary">Rename
+          key of a dictionary
+        </a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <hr>
+  <h1>Tuples & Sets</h1>
+  <div class="content">
+    <p>Complete the following exercises:</p>
+    <ul>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-tuple-exercise-with-solutions/#h-exercise-4-unpack-the-tuple-into-4-variables">Unpack
+          the tuple into 4 variables
+        </a>
+      </li>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-tuple-exercise-with-solutions/#h-exercise-6-copy-specific-elements-from-one-tuple-to-a-new-tuple">Copy
+          specific elements from one tuple to a new tuple
+        </a>
+      </li>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-tuple-exercise-with-solutions/#h-exercise-7-modify-the-tuple">Modify the
+          tuple
+        </a>
+      </li>
+      <li>
+        <a target="_blank"
+          href="https://pynative.com/python-set-exercise-with-solutions/#h-exercise-2-return-a-new-set-of-identical-items-from-two-sets">Return
+          a new set of identical items from two sets
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

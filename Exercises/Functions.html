@@ -1,0 +1,531 @@
+<html lang="en" class="rem-14">
+
+<head>
+    <style type="text/css">
+        body {
+            line-height: 1.428571429 !important;
+            font-family: var(--ps-type-font-family);
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        :root {
+            --ps-type-font-family: "OpenSans", Arial, Helvetica, sans-serif;
+            --ps-type-font-family-code: "DM Mono", "Source Code Pro", monospace;
+            --ps-type-letter-spacing-tighter: -0.025em;
+            --ps-colors-background-dark-3: #1e2429;
+            --ps-colors-code-white: #f2f2f2;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .footer {
+            font-size: 13px;
+        }
+
+        code {
+            display: inline-block;
+            margin: 0 20px;
+            padding: 15px 0;
+            line-height: 1.5em;
+            letter-spacing: var(--ps-type-letter-spacing-tighter);
+            font-family: var(--ps-type-font-family-code);
+            font-size: 15px;
+        }
+
+        code:not(.cmh) {
+            border-radius: 0;
+            color: #4e9bcc;
+            display: inline-block;
+            margin: 0;
+            background: #f7f7f8;
+            padding: 0 6px;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .mtk1 {
+            color: #f2f2f2;
+        }
+
+        .mtk4 {
+            color: #ff9466;
+        }
+
+        .mtk6 {
+            color: #b8cc7a;
+        }
+
+        .mtk7 {
+            color: #aaaaaa;
+        }
+
+        .mtk9 {
+            color: #e695bd;
+        }
+
+        pre {
+            letter-spacing: var(--ps-type-letter-spacing-tighter);
+            font-family: var(--ps-type-font-family-code);
+            font-size: 15px;
+        }
+
+        .output {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        a,
+        a:visited {
+            color: #4e9bcc;
+        }
+    </style>
+</head>
+
+<body>
+    <span style="display:none">Rita Vale - rita.martins.vale@gmail.com</span>
+    <b class="title">Exercise 1: List Less Than Ten</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://www.practicepython.org/exercise/2014/02/15/03-list-less-than-ten.html">Source</a>
+    <div class="content">
+        <p>
+            Create a function called <code>less_than_5</code> that takes a list and
+            prints out all the elements of the list that are less than 5.
+        </p>
+        <p class="output">Sample Input</p>
+        <code>[7, 3, 13, 6, 8, 5, 1, 2, 4, 15]</code>
+        <p class="output">Sample Output</p>
+        <code>&ensp;3&ensp;</code>
+        <br />
+        <code>&ensp;1&ensp;</code>
+        <br />
+        <code>&ensp;2&ensp;</code>
+        <br />
+        <code>&ensp;4&ensp;</code>
+        <br />
+        <br />
+        <details>
+            <summary><b>Sample Solution</b></summary>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">less_than_5</span>(lst):
+    <span style="color: #007020; font-weight: bold">for</span> i <span style="color: #007020; font-weight: bold">in</span> lst:
+    <span style="color: #007020; font-weight: bold">if</span> i <span style="color: #666666">&lt;</span> <span style="color: #40a070">5</span>: 
+        <span style="color: #007020">print</span>(i)
+</pre>
+            </div>
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 1.1: List Less Than Ten</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://www.practicepython.org/exercise/2014/02/15/03-list-less-than-ten.html">Source</a>
+    <div class="content">
+        <p>
+            Instead of printing the elements one by one, return a new list that has
+            all the elements less than 5 from the input list. Use a list
+            comprehension.
+        </p>
+        <p class="output">Sample Input</p>
+        <code>[7, 3, 13, 6, 8, 5, 1, 2, 4, 15]</code>
+        <p class="output">Sample Output</p>
+        <code>[3, 1, 2, 4]</code>
+        <br />
+        <br />
+        <details>
+            <summary><b>Sample Solution</b></summary>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">less_than_5</span>(lst):
+    <span style="color: #007020; font-weight: bold">return</span> [i <span style="color: #007020; font-weight: bold">for</span> i <span style="color: #007020; font-weight: bold">in</span> lst <span style="color: #007020; font-weight: bold">if</span> i<span style="color: #666666">&lt;</span><span style="color: #40a070">5</span>]
+</pre>
+            </div>
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 2: Calculate the sum of all numbers from 1 to a given number</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://pynative.com/python-if-else-and-for-loop-exercise-with-solutions/#h-exercise-3-calculate-the-sum-of-all-numbers-from-1-to-a-given-number">Source</a>
+    <div class="content">
+        <p>
+            Create a function called <code>sum_numbers</code> that takes a positive
+            integer <i>n</i> and returns the sum of all numbers from 1 to n.
+        </p>
+        <p class="output">Sample Input</p>
+        <code>&ensp;10&ensp;</code>
+        <p class="output">Sample Output</p>
+        <code>&ensp;55&ensp;</code>
+        <br />
+        <br />
+        <details>
+            <summary><b>Hint</b></summary>
+            Use the built-in function
+            <a target="_blank" href="https://www.w3schools.com/python/ref_func_range.asp"><code>range()</code></a>.
+        </details>
+        <br />
+        <details>
+            <summary><b>Sample Solutions</b></summary>
+            Solution 1. Using a <code>for</code> loop
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">sum_numbers</span>(n):
+    s <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+    <span style="color: #007020; font-weight: bold">for</span> i <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #40a070">1</span>, n<span style="color: #666666">+</span><span style="color: #40a070">1</span>):
+        s <span style="color: #666666">+=</span> i
+    <span style="color: #007020; font-weight: bold">return</span> s
+</pre>
+            </div>
+            <p></p>
+            Solution 2. Using the built-in function
+            <a target="_blank" href="https://www.w3schools.com/python/ref_func_sum.asp"><code>sum()</code></a>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">sum_numbers</span>(n):
+    <span style="color: #007020; font-weight: bold">return</span> <span style="color: #007020">sum</span>(<span style="color: #007020">range</span>(<span style="color: #40a070">1</span>, n<span style="color: #666666">+</span><span style="color: #40a070">1</span>))
+</pre>
+            </div>
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 3: Calculate the cube of all numbers from 1 to a given number</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://pynative.com/python-if-else-and-for-loop-exercise-with-solutions/#h-exercise-16-calculate-the-cube-of-all-numbers-from-1-to-a-given-number">Source</a>
+    <div class="content">
+        <p>
+            Create a function called <code>cube_numbers</code> that takes a positive
+            integer <i>n</i> and returns a list with the cube of all numbers from 1
+            to n. Use a list comprehension.
+        </p>
+        <p class="output">Sample Input</p>
+        <code>&ensp;6&ensp;</code>
+        <br />
+        <p class="output">Sample Output</p>
+        <code>[1, 8, 27, 64, 125, 216]</code>
+        <br />
+        <br />
+        <details>
+            <summary><b>Hint</b></summary>
+            You can get the cube <i>c</i> of a number <i>x</i> by multiplying
+            itself three times: <code>c = x * x * x = x**3</code>.
+        </details>
+        <br />
+        <details>
+            <summary><b>Sample Solution</b></summary>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">cube_numbers</span>(n):
+    <span style="color: #007020; font-weight: bold">return</span> [n<span style="color: #666666">**</span><span style="color: #40a070">3</span> <span style="color: #007020; font-weight: bold">for</span> n <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #40a070">1</span>, n<span style="color: #666666">+</span><span style="color: #40a070">1</span>)]
+</pre>
+            </div>
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 4: New list of numbers based on condition</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://pynative.com/python-if-else-and-for-loop-exercise-with-solutions/#h-exercise-5-display-numbers-from-a-list-using-loop">Source</a>
+    <div class="content">
+        <p>
+            Create a function called <code>filter_list</code> that takes a list of integers and returns a new list with
+            only the numbers that statisfy the following conditions:
+        <ol>
+            <li>The number must be divisible by 5.</li>
+            <li>If the number is greater than 150 but less than or equal to 500, then skip it and move to the next
+                number.</li>
+            <li>If the number is greater than 500, then stop the loop.</li>
+        </ol>
+        </p>
+        <p class="output">Sample Input</p>
+        <code>[12, 75, 150, 180, 145, 525, 50]</code>
+        <br />
+        <p class="output">Sample Output</p>
+        <code>[75, 150, 145]</code>
+        <br />
+        <br />
+        <details>
+            <summary><b>Hint</b></summary>
+            <li>Use <code>for</code> loop to iterate each item of a list.</li>
+            <li>Use <code>break</code> statement to break the loop if the current number is greater than 500.</li>
+            <li>Use <code>continue</code> statement to move to the next number if the current number is greater than
+                150.</li>
+            <li>Use <code>number % 5 == 0</code> condition to check if number is divisible by 5.</li>
+        </details>
+        <br />
+        <details>
+            <summary><b>Sample Solution</b></summary>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">filter_list</span>(lst):
+    new_lst <span style="color: #666666">=</span> []
+
+    <span style="color: #007020; font-weight: bold">for</span> number <span style="color: #007020; font-weight: bold">in</span> lst:
+        <span style="color: #007020; font-weight: bold">if</span> number <span style="color: #666666">&gt;</span> <span style="color: #40a070">500</span>:
+            <span style="color: #007020; font-weight: bold">break</span>
+        <span style="color: #007020; font-weight: bold">elif</span> number <span style="color: #666666">&gt;</span> <span style="color: #40a070">150</span>:
+            <span style="color: #007020; font-weight: bold">continue</span>
+        <span style="color: #60a0b0; font-style: italic"># check if number is divisible by 5</span>
+        <span style="color: #007020; font-weight: bold">elif</span> number <span style="color: #666666">%</span> <span style="color: #40a070">5</span> <span style="color: #666666">==</span> <span style="color: #40a070">0</span>:
+            new_lst<span style="color: #666666">.</span>append(number)
+    
+    <span style="color: #007020; font-weight: bold">return</span> new_lst
+</pre>
+            </div>
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 5: Guessing Game</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html">Source</a>
+    <div class="content">
+        <p>Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell
+            them whether they guessed too low, too high, or exactly right.
+            <br>Keep the game going until the user guesses the correct number.<br>Keep track of how many guesses the
+            user has taken and, when the game ends, print this out.
+        </p>
+        <p></p>
+        <details>
+            <summary><b>Hint</b></summary>
+            <li>To generate a random integer, you need to import the <a target="_blank"
+                    href="https://www.w3schools.com/python/module_random.asp">
+                    <code>random</code></a> and use the function <a target="_blank"
+                    href="https://www.w3schools.com/python/ref_random_randint.asp">
+                    <code>randint()</code></a>.</li>
+            <li>To get user input use the function <a target="_blank"
+                    href="https://www.w3schools.com/python/python_user_input.asp">
+                    <code>input()</code></a> and convert the result to integer using <a target="_blank"
+                    href="https://www.w3schools.com/python/ref_func_int.asp">
+                    <code>int()</code></a>.</li>
+            <li>To play the game, use a <a target="_blank"
+                    href="https://www.w3schools.com/python/python_while_loops.asp">
+                    while</a> loop with condition <code>True</code> and use <code>break</code> when the user's guess is
+                correct to stop the game.</li>
+        </details>
+        <br />
+        <details>
+            <summary><b>Sample Solution</b></summary>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">random</span>
+
+number <span style="color: #666666">=</span> random<span style="color: #666666">.</span>randint(<span style="color: #40a070">1</span>,<span style="color: #40a070">9</span>)
+number_of_guesses <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+
+<span style="color: #007020; font-weight: bold">while</span> <span style="color: #007020; font-weight: bold">True</span>:
+    guess <span style="color: #666666">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">input</span>(<span style="color: #4070a0">&quot;Guess a number between 1 and 9: &quot;</span>))
+    number_of_guesses <span style="color: #666666">+=</span> <span style="color: #40a070">1</span>
+
+    <span style="color: #007020; font-weight: bold">if</span> guess <span style="color: #666666">&lt;</span> number:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Too low&quot;</span>)
+    <span style="color: #007020; font-weight: bold">elif</span> guess <span style="color: #666666">&gt;</span> number:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Too high&quot;</span>)
+    <span style="color: #007020; font-weight: bold">else</span>:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;You got it!&quot;</span>)
+        <span style="color: #007020; font-weight: bold">break</span>
+        
+<span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;You needed&quot;</span>, number_of_guesses, <span style="color: #4070a0">&quot;guesses to guess the number&quot;</span>, number)
+</pre>
+            </div>
+
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 5.1: Guessing Game - Try..Except</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://www.practicepython.org/exercise/2022/07/17/40-error-checking.html">Source</a>
+    <div class="content">
+        <p>
+            In this program, if the user enters text (for example, "testing") instead of a number, an exception is
+            thrown causing
+            the program to crash: <code>ValueError: invalid literal for int() with base 10: 'testing'</code>
+        </p>
+        <p>
+            Place the line asking for the user's input inside a <code>try</code> statement and on the
+            <code>except</code> block write a print statement warning the user that the input needs to be a number. Use
+            a nested <code>while</code> loop to continue asking for a valid input and <code>break</code> from it when
+            the input is valid.
+        </p>
+        <p></p>
+        <details>
+            <summary><b>Sample Solution</b></summary>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">random</span>
+
+number <span style="color: #666666">=</span> random<span style="color: #666666">.</span>randint(<span style="color: #40a070">1</span>,<span style="color: #40a070">9</span>)
+number_of_guesses <span style="color: #666666">=</span> <span style="color: #40a070">0</span>
+    
+<span style="color: #007020; font-weight: bold">while</span> <span style="color: #007020; font-weight: bold">True</span>:
+<b>     <span style="color: #007020; font-weight: bold">while</span> <span style="color: #007020; font-weight: bold">True</span>:
+         <span style="color: #007020; font-weight: bold">try</span>:
+            guess <span style="color: #666666">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">input</span>(<span style="color: #4070a0">&quot;Guess a number between 1 and 9: &quot;</span>))
+            <span style="color: #007020; font-weight: bold">break</span>
+        <span style="color: #007020; font-weight: bold">except</span> <span style="color: #007020">ValueError</span>:
+            <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;You must enter a number&quot;</span>)
+</b>      
+    number_of_guesses <span style="color: #666666">+=</span> <span style="color: #40a070">1</span>
+
+    <span style="color: #007020; font-weight: bold">if</span> guess <span style="color: #666666">&lt;</span> number:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Too low&quot;</span>)
+    <span style="color: #007020; font-weight: bold">elif</span> guess <span style="color: #666666">&gt;</span> number:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Too high&quot;</span>)
+    <span style="color: #007020; font-weight: bold">else</span>:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;You got it!&quot;</span>)
+        <span style="color: #007020; font-weight: bold">break</span>
+        
+<span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;You needed&quot;</span>, number_of_guesses, <span style="color: #4070a0">&quot;guesses to guess the number&quot;</span>, number)
+</pre>
+            </div>
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 6: FizzBuzz</b>&ensp;
+    <a class="footer" target="_blank"
+        href="https://www.hackerrank.com/challenges/fizzbuzz/problem?h_r=internal-search">Source</a>
+    <div class="content">
+        <p>
+            Write a program that prints each number from 1 to 100 on a new line.
+        <ol>
+            <li>For multiples of 3, print "Fizz" instead of the number.</li>
+            <li>For multiples of 5, print "Buzz" instead of the number.</li>
+            <li>For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+            </li>
+        </ol>
+        </p>
+        <p></p>
+        <details>
+            <summary><b>Hint</b></summary>
+            A number <i>x</i> is a multiple of 3 if it is divisible by 3. A number is divisible by 3 if the remainder is
+            0.
+            <br>
+            The modulo operation <code>x % 3</code> returns the remainder of the division of <i>x</i> by 3.
+        </details>
+        <br />
+        <details>
+            <summary><b>Sample Solution</b></summary>
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #60a0b0; font-style: italic">#for loop that traverses numbers from 1 to 100</span>
+<span style="color: #007020; font-weight: bold">for</span> num <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #40a070">1</span>,<span style="color: #40a070">101</span>):
+    <span style="color: #60a0b0; font-style: italic">#checking that number is divisible by both 3 and 5</span>
+    <span style="color: #007020; font-weight: bold">if</span>(num<span style="color: #666666">%</span><span style="color: #40a070">3</span> <span style="color: #666666">==</span> <span style="color: #40a070">0</span> <span style="color: #007020; font-weight: bold">and</span> num<span style="color: #666666">%</span><span style="color: #40a070">5</span> <span style="color: #666666">==</span> <span style="color: #40a070">0</span>):
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;FizzBuzz&quot;</span>)
+    <span style="color: #60a0b0; font-style: italic">#checking that number is divisible by 3</span>
+    <span style="color: #007020; font-weight: bold">elif</span>(num<span style="color: #666666">%</span><span style="color: #40a070">3</span> <span style="color: #666666">==</span> <span style="color: #40a070">0</span>):
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Fizz&quot;</span>)
+    <span style="color: #60a0b0; font-style: italic">#checking that number is divisible by 5</span>
+    <span style="color: #007020; font-weight: bold">elif</span>(num<span style="color: #666666">%</span><span style="color: #40a070">5</span> <span style="color: #666666">==</span> <span style="color: #40a070">0</span>):
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Buzz&quot;</span>)
+    <span style="color: #60a0b0; font-style: italic">#And if not divisible by either of them print num as it is</span>
+    <span style="color: #007020; font-weight: bold">else</span>:
+        <span style="color: #007020">print</span>(num)
+</pre>
+            </div>
+
+        </details>
+    </div>
+    <br />
+    <br />
+    <b class="title">Exercise 7: Fibonacci numbers</b>&ensp;
+    <a class="footer" target="_blank" href="https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/">Source</a>
+    <div class="content">
+        <p>
+            The Fibonacci numbers are the numbers in the following integer sequence.
+            0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
+            <br>
+            The first two terms are 0 and 1 (F0 = 0, F1 = 1). All other terms are obtained by adding the preceding two
+            terms. This means the <i>n</i>th term is the sum of <i>(n-1)</i>th and <i>(n-2)</i>th terms (Fn = Fn-1 +
+            Fn-2).
+            <br>
+            Create a function called <code>fibonacci</code> that takes an integer <i>n</i> and returns the <i>n</i>th
+            element in the Fibonacci sequence.
+        </p>
+        <p class="output">Sample Input</p>
+        <code>&ensp;9&ensp;</code>
+        <p class="output">Sample Output</p>
+        <code>&ensp;34&ensp;</code>
+        <br />
+        <br />
+        <details>
+            <summary><b>Sample Solutions</b></summary>
+            Using recursion
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">fibonacci</span>(n):
+    <span style="color: #60a0b0; font-style: italic"># If n &lt; 0, print incorrect input</span>
+    <span style="color: #007020; font-weight: bold">if</span> n <span style="color: #666666">&lt;</span> <span style="color: #40a070">0</span>:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Incorrect input&quot;</span>)
+ 
+    <span style="color: #60a0b0; font-style: italic"># If n is 0, return 0</span>
+    <span style="color: #007020; font-weight: bold">elif</span> n <span style="color: #666666">==</span> <span style="color: #40a070">0</span>:
+        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">0</span>
+ 
+    <span style="color: #60a0b0; font-style: italic"># If n is 1, return 1</span>
+    <span style="color: #007020; font-weight: bold">elif</span> n <span style="color: #666666">==</span> <span style="color: #40a070">1</span>:
+        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">1</span>
+ 
+    <span style="color: #007020; font-weight: bold">else</span>:
+        <span style="color: #007020; font-weight: bold">return</span> fibonacci(n<span style="color: #666666">-</span><span style="color: #40a070">1</span>) <span style="color: #666666">+</span> fibonacci(n<span style="color: #666666">-</span><span style="color: #40a070">2</span>)
+</pre>
+            </div>
+
+            <p></p>
+            Using a for loop
+            <!-- HTML generated using hilite.me -->
+            <div
+                style="background: #f0f0f0; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                <pre style="margin: 0; line-height: 125%"><span style="color: #007020; font-weight: bold">def</span> <span style="color: #06287e">fibonacci</span>(n):
+    <span style="color: #60a0b0; font-style: italic"># First two terms</span>
+    n1, n2 <span style="color: #666666">=</span> <span style="color: #40a070">0</span>, <span style="color: #40a070">1</span>
+
+    <span style="color: #60a0b0; font-style: italic"># If n &lt; 0, print incorrect input</span>
+    <span style="color: #007020; font-weight: bold">if</span> n <span style="color: #666666">&lt;</span> <span style="color: #40a070">0</span>:
+        <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;Incorrect input&quot;</span>)
+ 
+    <span style="color: #60a0b0; font-style: italic"># If n is 0, return 0</span>
+    <span style="color: #007020; font-weight: bold">elif</span> n <span style="color: #666666">==</span> <span style="color: #40a070">0</span>:
+        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">0</span>
+ 
+    <span style="color: #60a0b0; font-style: italic"># If n is 1, return 1</span>
+    <span style="color: #007020; font-weight: bold">elif</span> n <span style="color: #666666">==</span> <span style="color: #40a070">1</span>:
+        <span style="color: #007020; font-weight: bold">return</span> <span style="color: #40a070">1</span>
+ 
+    <span style="color: #007020; font-weight: bold">else</span>:
+        <span style="color: #007020; font-weight: bold">for</span> _ <span style="color: #007020; font-weight: bold">in</span> <span style="color: #007020">range</span>(n<span style="color: #666666">-</span><span style="color: #40a070">1</span>):
+            res <span style="color: #666666">=</span> n1 <span style="color: #666666">+</span> n2
+            <span style="color: #60a0b0; font-style: italic"># Update values</span>
+            n1 <span style="color: #666666">=</span> n2
+            n2 <span style="color: #666666">=</span> res
+        <span style="color: #007020; font-weight: bold">return</span> n2
+</pre>
+            </div>
+
+        </details>
+    </div>
+    <br />
+    <br />
+</body>
+
+</html>
